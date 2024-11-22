@@ -25,11 +25,21 @@ You should have:
 
 `cd client`
 
+We have added `--legacy-peer-deps` flag to be compatible with Next and React Versions
+
 `npm i lucide-react uuid dotenv date-fns framer-motion react-hook-form zod @hookform/resolvers @hello-pangea/dnd --legacy-peer-deps`
+
+#### Tailwind
 
 `npm i tailwindcss-animate --legacy-peer-deps`
 
-We have added `--legacy-peer-deps` flag to be compatible with Next and React Versions
+#### Shadcn
+
+In shadcn always choose --legacy-peer-deps option
+
+`npx shadcn@latest init -d`
+
+`npx shadcn@latest add accordion avatar button card dialog form input label navigation-menu popover progress select separator sheet sidebar skeleton switch table tabs textarea toggle tooltip`
 
 ### Dev Dependencies
 
@@ -37,4 +47,4 @@ We have added `--legacy-peer-deps` flag to be compatible with Next and React Ver
 
 `npm i -D @types/node @types/uuid --legacy-peer-deps`
 
-We have added `--legacy-peer-deps` flag to be compatible with Next and React Versions
+`npm i -D prettier-plugin-tailwindcss --legacy-peer-deps`
