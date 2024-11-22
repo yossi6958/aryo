@@ -41,6 +41,10 @@ In shadcn always choose --legacy-peer-deps option
 
 `npx shadcn@latest add accordion avatar button card dialog form input label navigation-menu popover progress select separator sheet sidebar skeleton switch table tabs textarea toggle tooltip`
 
+#### Redux
+
+`npm i react-redux @reduxjs/toolkit --legacy-peer-deps`
+
 ### Dev Dependencies
 
 `cd client`
@@ -48,3 +52,7 @@ In shadcn always choose --legacy-peer-deps option
 `npm i -D @types/node @types/uuid --legacy-peer-deps`
 
 `npm i -D prettier-plugin-tailwindcss --legacy-peer-deps`
+
+### Env Variables
+
+you should create `.env{.local/.development/.deployment}` with Variables same as `.env.example`
