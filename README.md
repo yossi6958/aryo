@@ -23,8 +23,6 @@ You should have:
 
 ### Dependencies
 
-`cd client`
-
 We have added `--legacy-peer-deps` flag to be compatible with Next and React Versions
 
 `npm i lucide-react uuid dotenv date-fns framer-motion react-hook-form zod @hookform/resolvers @hello-pangea/dnd --legacy-peer-deps`
@@ -47,12 +45,16 @@ In shadcn always choose --legacy-peer-deps option
 
 ### Dev Dependencies
 
-`cd client`
-
 `npm i -D @types/node @types/uuid --legacy-peer-deps`
 
 `npm i -D prettier-plugin-tailwindcss --legacy-peer-deps`
 
 ### Env Variables
 
-you should create `.env{.local/.development/.deployment}` with Variables same as `.env.example`
+You should create `.env{.local/.development/.deployment}` with Variables same as `.env.example`
+
+And you are good to go!
+
+## Donwload and Run
+
+`npm i --legacy-peer-deps`

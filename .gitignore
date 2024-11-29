@@ -2,12 +2,11 @@
 **/dist/
 
 .env
-client/.env.local
-client/.env.development
-client/.env.production
-server/.env
+.env.local
+.env.development
+.env.production
 
-client/.next/
+.next/
 
 .DS_Store
 .vscode/
