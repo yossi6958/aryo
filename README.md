@@ -1,5 +1,11 @@
 # Aryo
 
+"Learn, Teach, and Grow with Aryo – Your Gateway to Knowledge and Opportunity."
+
+## About Aryo
+
+Aryo is an all-in-one platform for learners and instructors. Explore a diverse range of courses to enhance your skills, or create and sell your own courses to share your expertise with a global audience. Whether you're learning or teaching, Aryo makes knowledge accessible and empowering for everyone.
+
 ## For Developers
 
 ## Frontend
