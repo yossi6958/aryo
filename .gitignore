@@ -10,4 +10,10 @@ server/.env
 client/.next/
 
 .DS_Store
+Thumbs.db
+
 .vscode/
+
+server/shared-local-instance.db
+server/dynamodb-local-metadata.json
+shared-local-instance.db

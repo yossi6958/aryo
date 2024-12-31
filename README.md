@@ -2,6 +2,8 @@
 
 ## For Developers
 
+## Frontend
+
 I have created the app using:
 `npx create-next-app@latest`
 
@@ -12,7 +14,7 @@ Beside the common extensions for VsCode you should also make sure you have:
 1. ES7+ React/Redux/React-Native snippets by dsznajder.
 2. Prettier by Prettier.
 3. Tailwind CSS IntelliSense by Tailwind Labs.
-4. Tailwind CSS IntelliSense by alfredbirk.
+4. Tailwind Documentation by alfredbirk.
 
 ### Chrome Tools
 
@@ -56,3 +58,11 @@ In shadcn always choose --legacy-peer-deps option
 ### Env Variables
 
 you should create `.env{.local/.development/.deployment}` with Variables same as `.env.example`
+
+## AWS
+
+### DynamoDB
+
+`java -Djava.library.path={LOCAL_PATH}\dynamodb-local\DynamoDBLocal_lib -jar {LOCAL_PATH}\dynamodb-local\DynamoDBLocal.jar -sharedDb -dbPath {LOCAL_PATH}\dynamodb-local\run`
+
+`aws dynamodb list-tables --endpoint-url http://localhost:8000`
