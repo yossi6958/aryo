@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { Edit, X, Plus } from "lucide-react";
+//@ts-expect-error no d.ts for filepond
 import { registerPlugin } from "filepond";
 import { FilePond } from "react-filepond";
 import "filepond/dist/filepond.min.css";
@@ -134,13 +135,14 @@ export const CustomFormField: React.FC<FormFieldProps> = ({
 
         return (
           <FilePond
+            //@ts-expect-error no d.ts for filepond
             className={`${inputClassName}`}
             files={field.value ? [field.value] : []}
             allowMultiple={multiple}
-            onupdatefiles={(fileItems) => {
+            onupdatefiles={(fileItems: any[]) => {
               field.onChange(
                 multiple
-                  ? fileItems.map((fileItem) => fileItem.file)
+                  ? fileItems.map((fileItem: { file: any }) => fileItem.file)
                   : fileItems[0]?.file
               );
             }}
