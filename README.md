@@ -8,11 +8,6 @@ Aryo is an all-in-one platform for learners and instructors. Explore a diverse r
 
 ## For Developers
 
-## Frontend
-
-I have created the app using:
-`npx create-next-app@latest`
-
 ### Extensions
 
 Beside the common extensions for VsCode you should also make sure you have:
@@ -29,7 +24,12 @@ You should have:
 1. Pesticide for Chrome
 2. Redux DevTools
 
-### Dependencies
+## Frontend
+
+I have created the client using:
+`npx create-next-app@latest`
+
+### Client Dependencies
 
 `cd client`
 
@@ -53,17 +53,43 @@ In shadcn always choose --legacy-peer-deps option
 
 `npm i react-redux @reduxjs/toolkit --legacy-peer-deps`
 
-### Dev Dependencies
+#### Clerk
+
+`npm i @clerk/clerk-js @clerk/nextjs @clerk/themes next themes --legacy-peer-deps`
+
+#### Stripe
+
+`npm i @stripe/react-stripe-js @stripe/stripe-js --legacy-peer-deps`
+
+### Client Dev Dependencies
 
 `cd client`
 
-`npm i -D @types/node @types/uuid --legacy-peer-deps`
-
-`npm i -D prettier-plugin-tailwindcss --legacy-peer-deps`
+`npm i -D @types/node @types/uuid prettier-plugin-tailwindcss --legacy-peer-deps`
 
 ### Env Variables
 
 you should create `.env{.local/.development/.deployment}` with Variables same as `.env.example`
+
+## Backend
+
+I have created the server using:
+`cd server`
+`npm init -y`
+
+### Server Dependencies
+
+`npm i @aws-sdk/client-dynamodb aws-sdk body-parser express cors dotenv helmet morgan dynamoose uuid pluralize`
+
+#### Stripe for Server
+
+`npm i stripe`
+
+### Server Dev Dependencies
+
+`npm i -D rimraf concurrently nodemon ts-node typescript @types/cors @types/express @types/morgan @types/node @types/uuid @types/pluralize`
+
+`npx tsc --init`
 
 ## AWS
 
@@ -72,3 +98,7 @@ you should create `.env{.local/.development/.deployment}` with Variables same as
 `java -Djava.library.path={LOCAL_PATH}\dynamodb-local\DynamoDBLocal_lib -jar {LOCAL_PATH}\dynamodb-local\DynamoDBLocal.jar -sharedDb -dbPath {LOCAL_PATH}\dynamodb-local\run`
 
 `aws dynamodb list-tables --endpoint-url http://localhost:8000`
+
+#### seeding mock data
+
+`npm run seed`
