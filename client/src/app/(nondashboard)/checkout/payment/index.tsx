@@ -32,7 +32,7 @@ const PaymentPageContent = () => {
     }
 
     const baseUrl = process.env.NEXT_PUBLIC_LOCAL_URL
-      ? `http://${process.env.NEXT_PUBLIC_LOCAL_URL}`
+      ? `${process.env.NEXT_PUBLIC_LOCAL_URL}`
       : process.env.NEXT_PUBLIC_VERCEL_URL
       ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
       : undefined;
