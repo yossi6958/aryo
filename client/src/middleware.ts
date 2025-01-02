@@ -14,10 +14,15 @@ export default clerkMiddleware(async (auth, req) => {
   if (userId) {
     const client = await clerkClient();
     const user = await client.users.getUser(userId);
-    userRole = user.publicMetadata?.userType as string;
+    if (user.publicMetadata.userType) {
+      userRole =
+        (
+          user.publicMetadata as {
+            userType: "student" | "teacher";
+          }
+        )?.userType || "student";
+    }
   }
-
-  console.log("userRole", userRole);
 
   if (isStudentRoute(req)) {
     if (userRole !== "student") {
